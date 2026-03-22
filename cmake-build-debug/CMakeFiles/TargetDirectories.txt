@@ -1,0 +1,3 @@
+/Users/caitschork/CLionProjects/Project 2 files/cmake-build-debug/CMakeFiles/Project2b.dir
+/Users/caitschork/CLionProjects/Project 2 files/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/caitschork/CLionProjects/Project 2 files/cmake-build-debug/CMakeFiles/rebuild_cache.dir
