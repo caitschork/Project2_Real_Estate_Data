@@ -1,16 +1,8 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja -S "/Users/caitschork/CLionProjects/Project 2 files" -B "/Users/caitschork/CLionProjects/Project 2 files/cmake-build-debug"
--- The C compiler identification is AppleClang 16.0.0.16000026
--- The CXX compiler identification is AppleClang 16.0.0.16000026
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/g++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Configuring done (1.5s)
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja -S /Users/caitschork/CLionProjects/Project2_Housing_Data -B /Users/caitschork/CLionProjects/Project2_Housing_Data/cmake-build-debug
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+-- Could NOT find FFTW (missing: FFTW_INCLUDE_DIRS) 
+Setting matplotplusplus compiler options
+-- Configuring done (0.2s)
 -- Generating done (0.0s)
--- Build files have been written to: /Users/caitschork/CLionProjects/Project 2 files/cmake-build-debug
+-- Build files have been written to: /Users/caitschork/CLionProjects/Project2_Housing_Data/cmake-build-debug

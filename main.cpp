@@ -2,8 +2,8 @@
 #include <chrono>
 #include "DataLoader.h"
 #include "HeapSort.h"
-// #include <matplot/matplot.h>
-// using namespace matplot;
+#include <matplot/matplot.h>
+using namespace matplot;
 
 // double price;
 // string city;
@@ -13,6 +13,7 @@
 // double house_size;
 // int beds;
 // int baths;
+
 
 vector<realEstate> filterHouses(const vector<realEstate>& houses, double maxPrice,
     string city, string state, string zip_code, double acre_lot, double house_size, int beds, int baths) {
@@ -49,6 +50,10 @@ int main() {
     int beds;
     int baths;
 
+    // for (int i = 10000; i < 10004; i++) {
+    //     cout << "Loaded Price: " << data[i].price << endl;
+    // }
+
     cout << "Enter max price (or 0 to skip): ";
     cin >> maxPrice;
 
@@ -64,7 +69,7 @@ int main() {
     cout << "Enter minimum acre lot size (or 0 to skip): ";
     cin >> acre_lot;
 
-    cout << "Enter minimum house size in square feet (or NONE to skip): ";
+    cout << "Enter minimum house size in square feet (or 0 to skip): ";
     cin >> house_size;
 
     cout << "Enter the number of bedrooms (or 0 to skip): ";
