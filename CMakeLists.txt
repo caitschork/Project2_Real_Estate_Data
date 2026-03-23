@@ -8,6 +8,7 @@ add_subdirectory(matplotplusplus)
 add_executable(Project2b main.cpp
         DataLoader.h
         DataLoader.cpp
-        HeapSort.cpp)
+        HeapSort.cpp
+        MergeSort.cpp)
 
 target_link_libraries(Project2b PUBLIC matplot)

@@ -2,6 +2,7 @@
 #include <chrono>
 #include "DataLoader.h"
 #include "HeapSort.h"
+#include "MergeSort.h"
 #include <matplot/matplot.h>
 using namespace matplot;
 
@@ -102,19 +103,19 @@ int main() {
     cout << "\nHeap Sort Time: " << heapTime << " ms" << endl;
 
     //other sorts to be implemented
-    // vector<realEstate> mergeData = filtered;
-    //
-    // auto start2 = std::chrono::high_resolution_clock::now();
-    // mergeSort(mergeData, 0, mergeData.size() - 1, sortChoice);
-    // auto end2 = std::chrono::high_resolution_clock::now();
-    // auto mergeTime = std::chrono::duration_cast<std::chrono::milliseconds>(end2 - start2).count();
-    //
-    // cout << "\nMerge Sort Time: " << mergeTime << " ms" << endl;
+    vector<realEstate> mergeData = filtered;
+
+    auto start2 = std::chrono::high_resolution_clock::now();
+    mergeSort(mergeData, 0, mergeData.size() - 1, sortChoice);
+    auto end2 = std::chrono::high_resolution_clock::now();
+    auto mergeTime = std::chrono::duration_cast<std::chrono::milliseconds>(end2 - start2).count();
+
+    cout << "\nMerge Sort Time: " << mergeTime << " ms" << endl;
     //
     // vector<realEstate> quickData = filtered;
     //
     // auto start3 = std::chrono::high_resolution_clock::now();
-    // quickSort(mergeData, 0, quickData.size() - 1, sortChoice);
+    // quickSort(quickData, 0, quickData.size() - 1, sortChoice);
     // auto end3 = std::chrono::high_resolution_clock::now();
     // auto quickTime = std::chrono::duration_cast<std::chrono::milliseconds>(end3 - start3).count();
     //
@@ -146,7 +147,6 @@ int main() {
     // tite("Sorting Algorithms Runtime");
     // ylabel("Time (ms)");
     // show();
-
     return 0;
 }
 
