@@ -3,16 +3,7 @@
 //
 #include "HeapSort.h"
 #include <algorithm>
-/*
-    double price;
-    string city;
-    string state;
-    string zip_code;
-    double acre_lot;
-    double house_size;
-    int beds;
-    int baths;
- */
+
 double sortGetter(const realEstate& h, int sortType) {
   if (sortType == 1)
     return h.price;

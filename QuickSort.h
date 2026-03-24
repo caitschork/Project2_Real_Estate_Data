@@ -2,6 +2,7 @@
 // Created by Sydney Vargo on 3/23/26.
 //
 #include <vector>
+#include "DataLoader.h"
 
 #ifndef QUICKSORT_H
 #define QUICKSORT_H
