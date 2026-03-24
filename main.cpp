@@ -119,15 +119,15 @@ int main() {
     auto mergeTime = std::chrono::duration_cast<std::chrono::milliseconds>(end2 - start2).count();
 
     cout << "\nMerge Sort Time: " << mergeTime << " ms" << endl;
-    //
-    // vector<realEstate> quickData = filtered;
-    //
-    // auto start3 = std::chrono::high_resolution_clock::now();
-    // quickSort(quickData, 0, quickData.size() - 1, sortChoice);
-    // auto end3 = std::chrono::high_resolution_clock::now();
-    // auto quickTime = std::chrono::duration_cast<std::chrono::milliseconds>(end3 - start3).count();
-    //
-    // cout << "\nQuick Sort Time: " << quickTime << " ms" << endl;
+    
+    vector<realEstate> quickData = filtered;
+    
+    auto start3 = std::chrono::high_resolution_clock::now();
+    quickSort(quickData, 0, quickData.size() - 1, sortChoice);
+    auto end3 = std::chrono::high_resolution_clock::now();
+    auto quickTime = std::chrono::duration_cast<std::chrono::milliseconds>(end3 - start3).count();
+    
+    cout << "\nQuick Sort Time: " << quickTime << " ms" << endl;
 
 
     cout << "\nTop 5 Results:\n";
