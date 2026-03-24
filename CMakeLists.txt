@@ -9,6 +9,7 @@ add_executable(Project2b main.cpp
         DataLoader.h
         DataLoader.cpp
         HeapSort.cpp
-        MergeSort.cpp)
+        MergeSort.cpp
+        QuickSort.cpp)
 
 target_link_libraries(Project2b PUBLIC matplot)
