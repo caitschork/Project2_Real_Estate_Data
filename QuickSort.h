@@ -3,10 +3,11 @@
 //
 #include <vector>
 
-#ifndef PROJECT2_QUICKSORT_H
-#define PROJECT2_QUICKSORT_H
+#ifndef QUICKSORT_H
+#define QUICKSORT_H
 
+// define quick sort functions
 void quickSort(std::vector<realEstate> listings, int low, int high, int sortType);
 int partition(std::vector<realEstate> listings, int low, int high, int sortType);
 
-#endif //PROJECT2_QUICKSORT_H
+#endif //QUICKSORT_H
