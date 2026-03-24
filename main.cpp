@@ -4,8 +4,16 @@
 #include "DataLoader.h"
 #include "HeapSort.h"
 #include "MergeSort.h"
-#include "QuickSort.h"
 
+
+// double price;
+// string city;
+// string state;
+// string zip_code;
+// double acre_lot;
+// double house_size;
+// int beds;
+// int baths;
 
 string toLowercase(const string &s) {
     string result = s;
@@ -51,6 +59,9 @@ int main() {
     int beds;
     int baths;
 
+    // for (int i = 10000; i < 10004; i++) {
+    //     cout << "Loaded Price: " << data[i].price << endl;
+    // }
 
     cout << "Enter max price (or 0 to skip): ";
     cin >> maxPrice;
@@ -148,4 +159,16 @@ int main() {
     return 0;
 }
 
-
+//Print first 5 rows
+// for (int i = 0; i < 5 && i < data.size(); i++) {
+//     cout << "House " << i + 1 << ":\n";
+//     cout << "Price: " << data[i].price << "\n";
+//     cout << "Beds: " << data[i].beds << "\n";
+//     cout << "Baths: " << data[i].baths << "\n";
+//     cout << "Acre Lot: " << data[i].acre_lot << "\n";
+//     cout << "City: " << data[i].city << "\n";
+//     cout << "State: " << data[i].state << "\n";
+//     cout << "Zip: " << data[i].zip_code << "\n";
+//     cout << "House Size: " << data[i].house_size << "\n";
+//     cout << "\n\n";
+// }
