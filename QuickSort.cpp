@@ -4,45 +4,50 @@
 
 #include "QuickSort.h"
 #include <algorithm>
+// referenced quick sort logic & code from in person lecture notes
 
-void quickSort(std::vector<int> listings, int low, int high) {
+// quick sort function 
+void quickSort(std::vector<int> listings, int low, int high, int sortType) {
     if (low < high) {
         int pivot = partition(listings, low, high);
-        quickSort(listings, low, pivot-1);
-        quickSort(listings, pivot+1, high);
+        quickSort(listings, low, pivot-1, sortType);
+        quickSort(listings, pivot+1, high, sortType);
     }
 }
 
-int partition(std::vector<int> listings, int low, int high) {
-    int pivot = listings[low];
+// partition for quick sort
+int partition(std::vector<int> listings, int low, int high, int sortType) {
+    int pivot = sortGetter(listings[low], sortType); 
     int up = low;
     int down = high;
+    int upValue = sortGetter(listings[low], sortType);
+    int downValue = sortGetter(listings[high], sortType);
 
     while (up < down) {
         for (int i = up; i < high; i++) {
-            if (listings[up] > pivot) {
+            if (upValue > pivot) {
                 break;
             }
             up += 1;
         }
 
         for (int i = high; i > low; i--) {
-            if (listings[down] < pivot) {
+            if (downValue < pivot) {
                 break;
             }
             down -= 1;
         }
 
         if (up < down) {
-            realEstate temp = listings[up];
-            listings[up] = listings[down];
-            listings[down] = temp;
+            auto temp = upValue;
+            upValue = downValue;
+            downValue = temp;
         }
     }
 
-    realEstate temp = listings[low];
-    listings[low] = listings[down];
-    listings[down] = temp;
+    auto temp = upValue;
+    upValue = downValue;
+    downValue = temp;
 
     return down;
 }
