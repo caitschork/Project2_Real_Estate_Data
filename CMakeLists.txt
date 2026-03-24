@@ -3,7 +3,6 @@ project(Project2b)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_subdirectory(matplotplusplus)
 
 add_executable(Project2b main.cpp
         DataLoader.h
@@ -12,4 +11,3 @@ add_executable(Project2b main.cpp
         MergeSort.cpp)
 
 
-target_link_libraries(Project2b PUBLIC matplot)
