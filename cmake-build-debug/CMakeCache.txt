@@ -359,34 +359,34 @@ FETCHCONTENT_QUIET:BOOL=ON
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Path to a library.
-FFTW_DOUBLE_LIB:FILEPATH=FFTW_DOUBLE_LIB-NOTFOUND
+FFTW_DOUBLE_LIB:FILEPATH=/opt/homebrew/lib/libfftw3.dylib
 
 //Path to a library.
-FFTW_DOUBLE_OPENMP_LIB:FILEPATH=FFTW_DOUBLE_OPENMP_LIB-NOTFOUND
+FFTW_DOUBLE_OPENMP_LIB:FILEPATH=/opt/homebrew/lib/libfftw3_omp.dylib
 
 //Path to a library.
-FFTW_DOUBLE_THREADS_LIB:FILEPATH=FFTW_DOUBLE_THREADS_LIB-NOTFOUND
+FFTW_DOUBLE_THREADS_LIB:FILEPATH=/opt/homebrew/lib/libfftw3_threads.dylib
 
 //Path to a library.
-FFTW_FLOAT_LIB:FILEPATH=FFTW_FLOAT_LIB-NOTFOUND
+FFTW_FLOAT_LIB:FILEPATH=/opt/homebrew/lib/libfftw3f.dylib
 
 //Path to a library.
-FFTW_FLOAT_OPENMP_LIB:FILEPATH=FFTW_FLOAT_OPENMP_LIB-NOTFOUND
+FFTW_FLOAT_OPENMP_LIB:FILEPATH=/opt/homebrew/lib/libfftw3f_omp.dylib
 
 //Path to a library.
-FFTW_FLOAT_THREADS_LIB:FILEPATH=FFTW_FLOAT_THREADS_LIB-NOTFOUND
+FFTW_FLOAT_THREADS_LIB:FILEPATH=/opt/homebrew/lib/libfftw3f_threads.dylib
 
 //Path to a file.
-FFTW_INCLUDE_DIRS:PATH=FFTW_INCLUDE_DIRS-NOTFOUND
+FFTW_INCLUDE_DIRS:PATH=/opt/homebrew/include
 
 //Path to a library.
-FFTW_LONGDOUBLE_LIB:FILEPATH=FFTW_LONGDOUBLE_LIB-NOTFOUND
+FFTW_LONGDOUBLE_LIB:FILEPATH=/opt/homebrew/lib/libfftw3l.dylib
 
 //Path to a library.
-FFTW_LONGDOUBLE_OPENMP_LIB:FILEPATH=FFTW_LONGDOUBLE_OPENMP_LIB-NOTFOUND
+FFTW_LONGDOUBLE_OPENMP_LIB:FILEPATH=/opt/homebrew/lib/libfftw3l_omp.dylib
 
 //Path to a library.
-FFTW_LONGDOUBLE_THREADS_LIB:FILEPATH=FFTW_LONGDOUBLE_THREADS_LIB-NOTFOUND
+FFTW_LONGDOUBLE_THREADS_LIB:FILEPATH=/opt/homebrew/lib/libfftw3l_threads.dylib
 
 //Path to a file.
 JPEG_INCLUDE_DIR:PATH=/opt/homebrew/include
@@ -761,14 +761,16 @@ FFTW_LONGDOUBLE_OPENMP_LIB-ADVANCED:INTERNAL=1
 FFTW_LONGDOUBLE_THREADS_LIB-ADVANCED:INTERNAL=1
 //Details about finding BLAS
 FIND_PACKAGE_MESSAGE_DETAILS_BLAS:INTERNAL=[/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/Accelerate.framework][v()]
+//Details about finding FFTW
+FIND_PACKAGE_MESSAGE_DETAILS_FFTW:INTERNAL=[/opt/homebrew/include][c ][v()]
 //Details about finding JPEG
 FIND_PACKAGE_MESSAGE_DETAILS_JPEG:INTERNAL=[/opt/homebrew/lib/libjpeg.dylib][/opt/homebrew/include][v80()]
 //Details about finding LAPACK
 FIND_PACKAGE_MESSAGE_DETAILS_LAPACK:INTERNAL=[/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/Accelerate.framework;-lm;-ldl][v()]
 //Details about finding PNG
-FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[/opt/homebrew/lib/libpng.dylib][/opt/homebrew/include][v1.6.48()]
+FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[/opt/homebrew/lib/libpng.dylib][/opt/homebrew/include][v1.6.55()]
 //Details about finding TIFF
-FIND_PACKAGE_MESSAGE_DETAILS_TIFF:INTERNAL=[/opt/homebrew/lib/libtiff.dylib][/opt/homebrew/include][c ][v4.7.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_TIFF:INTERNAL=[/opt/homebrew/lib/libtiff.dylib][/opt/homebrew/include][c ][v4.7.1()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB

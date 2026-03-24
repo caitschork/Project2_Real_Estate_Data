@@ -1,7 +1,6 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja -S /Users/caitschork/CLionProjects/Project2_Housing_Data -B /Users/caitschork/CLionProjects/Project2_Housing_Data/cmake-build-debug
 -- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
 -- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
--- Could NOT find FFTW (missing: FFTW_INCLUDE_DIRS) 
 Setting matplotplusplus compiler options
 -- Configuring done (0.2s)
 -- Generating done (0.0s)
