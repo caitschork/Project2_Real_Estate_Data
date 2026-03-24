@@ -6,7 +6,7 @@
 #ifndef PROJECT2_QUICKSORT_H
 #define PROJECT2_QUICKSORT_H
 
-void quickSort(std::vector<realEstate> listings, int low, int high);
-int partition(std::vector<realEstate> listings, int low, int high);
+void quickSort(std::vector<realEstate> listings, int low, int high, int sortType);
+int partition(std::vector<realEstate> listings, int low, int high, int sortType);
 
 #endif //PROJECT2_QUICKSORT_H
