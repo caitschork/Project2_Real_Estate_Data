@@ -1,9 +1,11 @@
 #include <iostream>
 #include <chrono>
 #include <fstream>
+#include <filesystem>
 #include "DataLoader.h"
 #include "HeapSort.h"
 #include "MergeSort.h"
+#include "QuickSort.h"
 
 
 // double price;
@@ -14,6 +16,22 @@
 // double house_size;
 // int beds;
 // int baths;
+int getNextRunID(const string& filename) {
+    ifstream inFile(filename);
+    string line;
+    int lastRun = 0;
+
+    // Skip header
+    getline(inFile, line);
+
+    while (getline(inFile, line)) {
+        int run;
+        sscanf(line.c_str(), "%d,", &run);
+        lastRun = run;
+    }
+
+    return lastRun + 1;
+}
 
 string toLowercase(const string &s) {
     string result = s;
@@ -119,14 +137,14 @@ int main() {
     auto mergeTime = std::chrono::duration_cast<std::chrono::milliseconds>(end2 - start2).count();
 
     cout << "\nMerge Sort Time: " << mergeTime << " ms" << endl;
-    
+
     vector<realEstate> quickData = filtered;
-    
+
     auto start3 = std::chrono::high_resolution_clock::now();
     quickSort(quickData, 0, quickData.size() - 1, sortChoice);
     auto end3 = std::chrono::high_resolution_clock::now();
     auto quickTime = std::chrono::duration_cast<std::chrono::milliseconds>(end3 - start3).count();
-    
+
     cout << "\nQuick Sort Time: " << quickTime << " ms" << endl;
 
 
@@ -144,16 +162,39 @@ int main() {
         cout << "\n";
     }
 
-    ofstream outFile("sort_results.csv");
+
+
+    // ofstream outFile("../sort_results.csv");
+    // if (outFile.is_open()) {
+    //     outFile << "Algorithm,Time\n";
+    //     outFile << "Heap Sort," << heapTime << "\n";
+    //     outFile << "Merge Sort," << mergeTime << "\n";
+    //     // outFile << "Quick Sort," << quickTime << "\n"; // Uncomment when ready
+    //     outFile.close();
+    //     cout << "\nResults exported to sort_results.csv!" << endl;
+    // } else {
+    //     cout << "Error: Could not create CSV file." << endl;
+    // }
+
+
+
+    string filename = "../sort_results.csv";
+    bool fileExists = std::filesystem::exists(filename);
+
+    int runID = fileExists ? getNextRunID(filename) : 1;
+
+    ofstream outFile(filename, ios::app);
+
     if (outFile.is_open()) {
-        outFile << "Algorithm,Time\n";
-        outFile << "Heap Sort," << heapTime << "\n";
-        outFile << "Merge Sort," << mergeTime << "\n";
-        // outFile << "Quick Sort," << quickTime << "\n"; // Uncomment when ready
+        if (!fileExists) {
+            outFile << "Run,Algorithm,Time\n";
+        }
+
+        outFile << runID << ",Heap Sort," << heapTime << "\n";
+        outFile << runID << ",Merge Sort," << mergeTime << "\n";
+        outFile << runID << ",Quick Sort," << quickTime << "\n";
+
         outFile.close();
-        cout << "\nResults exported to sort_results.csv!" << endl;
-    } else {
-        cout << "Error: Could not create CSV file." << endl;
     }
 
     return 0;
