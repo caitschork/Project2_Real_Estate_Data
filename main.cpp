@@ -4,6 +4,7 @@
 #include "DataLoader.h"
 #include "HeapSort.h"
 #include "MergeSort.h"
+#include "QuickSort.h"
 #include <matplot/matplot.h>
 using namespace matplot;
 
