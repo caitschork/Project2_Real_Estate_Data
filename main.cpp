@@ -145,7 +145,7 @@ int main() {
         cout << "\n";
     }
 
-    ofstream outFile("sort_results.csv");
+    ofstream outFile("../sort_results.csv");
     if (outFile.is_open()) {
         outFile << "Algorithm,Time\n";
         outFile << "Heap Sort," << heapTime << "\n";
