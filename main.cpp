@@ -4,6 +4,8 @@
 #include "DataLoader.h"
 #include "HeapSort.h"
 #include "MergeSort.h"
+#include <matplot/matplot.h>
+using namespace matplot;
 
 // double price;
 // string city;
@@ -34,7 +36,7 @@ vector<realEstate> filterHouses(const vector<realEstate>& houses, double maxPric
             (house_size == 0 || house.house_size >= house_size) &&
             (beds == 0 || house.beds == beds) &&
             (baths == 0 || house.baths == baths) &&
-            house.price > 1 && house.house_size > 1) {
+            house.price > 0 && house.house_size > 0) {
             filteredHouses.push_back(house);
         }
     }
@@ -49,7 +51,6 @@ int main() {
         cout << "No data loaded" << endl;
         return 1;
     }
-
     double maxPrice;
     string city;
     string state;
@@ -58,6 +59,10 @@ int main() {
     double house_size;
     int beds;
     int baths;
+
+    // for (int i = 10000; i < 10004; i++) {
+    //     cout << "Loaded Price: " << data[i].price << endl;
+    // }
 
     cout << "Enter max price (or 0 to skip): ";
     cin >> maxPrice;
@@ -115,12 +120,14 @@ int main() {
     auto mergeTime = std::chrono::duration_cast<std::chrono::milliseconds>(end2 - start2).count();
 
     cout << "\nMerge Sort Time: " << mergeTime << " ms" << endl;
-
+    //
+    // vector<realEstate> quickData = filtered;
+    //
     // auto start3 = std::chrono::high_resolution_clock::now();
     // quickSort(quickData, 0, quickData.size() - 1, sortChoice);
     // auto end3 = std::chrono::high_resolution_clock::now();
     // auto quickTime = std::chrono::duration_cast<std::chrono::milliseconds>(end3 - start3).count();
-
+    //
     // cout << "\nQuick Sort Time: " << quickTime << " ms" << endl;
 
 
@@ -138,7 +145,7 @@ int main() {
         cout << "\n";
     }
 
-    ofstream outFile("../sort_results.csv");
+    ofstream outFile("sort_results.csv");
     if (outFile.is_open()) {
         outFile << "Algorithm,Time\n";
         outFile << "Heap Sort," << heapTime << "\n";
@@ -153,3 +160,16 @@ int main() {
     return 0;
 }
 
+//Print first 5 rows
+// for (int i = 0; i < 5 && i < data.size(); i++) {
+//     cout << "House " << i + 1 << ":\n";
+//     cout << "Price: " << data[i].price << "\n";
+//     cout << "Beds: " << data[i].beds << "\n";
+//     cout << "Baths: " << data[i].baths << "\n";
+//     cout << "Acre Lot: " << data[i].acre_lot << "\n";
+//     cout << "City: " << data[i].city << "\n";
+//     cout << "State: " << data[i].state << "\n";
+//     cout << "Zip: " << data[i].zip_code << "\n";
+//     cout << "House Size: " << data[i].house_size << "\n";
+//     cout << "\n\n";
+// }
