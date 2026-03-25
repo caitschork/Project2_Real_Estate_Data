@@ -57,9 +57,9 @@ vector<realEstate> loadData(const string& filename) {
         //acre lot
         getline(ss,field, ',');
         if (field == "") {
-            house.acre_lot = 0;
+            house.acreLot = 0;
         }else {
-            house.acre_lot = stod(field);
+            house.acreLot = stod(field);
         }
 
         //street (not using, ignore)
@@ -72,14 +72,14 @@ vector<realEstate> loadData(const string& filename) {
         getline(ss, house.state, ',');
 
         //zip_code
-        getline(ss, house.zip_code, ',');
+        getline(ss, house.zipCode, ',');
 
         //house_size
         getline(ss, field, ',');
         if (field == "") {
-            house.house_size = 0;
+            house.houseSize = 0;
         }else {
-            house.house_size = stod(field);
+            house.houseSize = stod(field);
         }
 
         //prev sold date (ignore)

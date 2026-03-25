@@ -23,3 +23,6 @@ Number of Beds,Quick Sort,1581
 House Size,Heap Sort,6
 House Size,Merge Sort,3
 House Size,Quick Sort,1
+House Price,Heap Sort,60
+House Price,Merge Sort,15
+House Price,Quick Sort,10

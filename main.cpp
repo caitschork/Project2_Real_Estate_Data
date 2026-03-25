@@ -22,9 +22,9 @@ vector<realEstate> filterHouses(const vector<realEstate>& houses,
     double maxPrice,
     string city,
     string state,
-    string zip_code,
-    double acre_lot,
-    double house_size,
+    string zipCode,
+    double acreLot,
+    double houseSize,
     int beds,
     int baths) {
     vector<realEstate> filteredHouses;
@@ -32,12 +32,12 @@ vector<realEstate> filterHouses(const vector<realEstate>& houses,
         if ((maxPrice == 0 || house.price <= maxPrice) &&
             (toLowercase(city)== "none" || toLowercase(house.city) == toLowercase(city)) &&
             (toLowercase(state) == "none" || toLowercase(house.state) == toLowercase(state)) &&
-            (toLowercase(zip_code) == "none" || toLowercase(house.zip_code) == toLowercase(zip_code)) &&
-            (acre_lot == 0 || house.acre_lot >= acre_lot) &&
-            (house_size == 0 || house.house_size >= house_size) &&
+            (toLowercase(zipCode) == "none" || toLowercase(house.zipCode) == toLowercase(zipCode)) &&
+            (acreLot == 0 || house.acreLot >= acreLot) &&
+            (houseSize == 0 || house.houseSize >= houseSize) &&
             (beds == 0 || house.beds == beds) &&
             (baths == 0 || house.baths == baths) &&
-            house.price > 1 && house.house_size > 1) {
+            house.price > 1 && house.houseSize > 1) {
             filteredHouses.push_back(house);
         }
     }
@@ -78,9 +78,9 @@ int main() {
         double maxPrice;
         string city;
         string state;
-        string zip_code;
-        double acre_lot;
-        double house_size;
+        string zipCode;
+        double acreLot;
+        double houseSize;
         int beds;
         int baths;
 
@@ -95,13 +95,13 @@ int main() {
         getline(cin, state);
 
         cout << "Enter zip code (or None to skip): ";
-        getline(cin, zip_code);
+        getline(cin, zipCode);
 
         cout << "Enter minimum acre lot size (or 0 to skip): ";
-        cin >> acre_lot;
+        cin >> acreLot;
 
         cout << "Enter minimum house size in square feet (or 0 to skip): ";
-        cin >> house_size;
+        cin >> houseSize;
 
         cout << "Enter the number of bedrooms (or 0 to skip): ";
         cin >> beds;
@@ -111,7 +111,7 @@ int main() {
 
         //Filter Houses
         vector <realEstate> filtered = filterHouses(data, maxPrice, city,
-            state, zip_code, acre_lot, house_size, beds, baths);
+            state, zipCode, acreLot, houseSize, beds, baths);
 
         if (filtered.empty()) {
             cout << "\nNo matching houses found:(\n";
@@ -136,11 +136,27 @@ int main() {
             continue;
         }
 
-        //Sort and Clocked Time
+
+        //Display Results
         vector<realEstate> heapData = filtered;
         vector<realEstate> mergeData = filtered;
         vector<realEstate> quickData = filtered;
 
+        //Displaying results by heap sort (all algorithms produce the same output)
+        cout << "\nTop 5 Results:\n";
+        for (int i = 0; i < 5 && i < heapData.size(); i++) {
+            cout << "Price: $" << heapData[i].price << "\n";
+            cout << "Beds: " << heapData[i].beds << "\n";
+            cout << "Baths: " << heapData[i].baths << "\n";
+            cout << "Acre Lot Size: " << heapData[i].acreLot << "\n";
+            cout << "City: " << heapData[i].city << "\n";
+            cout << "State: " << heapData[i].state << "\n";
+            cout << "Zip Code: " << heapData[i].zipCode << "\n";
+            cout << "House Size (sqft): " << heapData[i].houseSize << "\n";
+            cout << "\n";
+        }
+
+        //Sort and Clocked Time
         //Heap sort
         auto start1 = std::chrono::high_resolution_clock::now();
         heapSort(heapData, sortChoice);
@@ -159,23 +175,10 @@ int main() {
         auto end3 = std::chrono::high_resolution_clock::now();
         auto quickTime = std::chrono::duration_cast<std::chrono::milliseconds>(end3 - start3).count();
 
-        cout << "\nHeap Sort Time: " << heapTime << " ms" << endl;
+
+        cout << "Heap Sort Time: " << heapTime << " ms" << endl;
         cout << "\nMerge Sort Time: " << mergeTime << " ms" << endl;
         cout << "\nQuick Sort Time: " << quickTime << " ms" << endl;
-
-        //Display Results
-        cout << "\nTop 5 Results:\n";
-        for (int i = 0; i < 5 && i < heapData.size(); i++) {
-            cout << "Price: $" << heapData[i].price << "\n";
-            cout << "Beds: " << heapData[i].beds << "\n";
-            cout << "Baths: " << heapData[i].baths << "\n";
-            cout << "Acre Lot Size: " << heapData[i].acre_lot << "\n";
-            cout << "City: " << heapData[i].city << "\n";
-            cout << "State: " << heapData[i].state << "\n";
-            cout << "Zip Code: " << heapData[i].zip_code << "\n";
-            cout << "House Size (sqft): " << heapData[i].house_size << "\n";
-            cout << "\n";
-        }
 
         //Save Results
         string fieldName;

@@ -9,7 +9,7 @@ double sortGetter(const realEstate& h, int sortType) {
     return h.price;
 
   else if (sortType == 2)
-    return h.house_size;
+    return h.houseSize;
 
   else if (sortType == 3)
     return h.beds;
@@ -18,7 +18,7 @@ double sortGetter(const realEstate& h, int sortType) {
     return h.baths;
 
   else if (sortType == 5)
-    return h.acre_lot;
+    return h.acreLot;
 
   else //sorts by price as default
     return h.price;

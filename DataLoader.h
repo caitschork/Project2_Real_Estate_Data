@@ -9,9 +9,9 @@ struct realEstate {
     double price;
     string city;
     string state;
-    string zip_code;
-    double acre_lot;
-    double house_size;
+    string zipCode;
+    double acreLot;
+    double houseSize;
     int beds;
     int baths;
 };
