@@ -10,24 +10,6 @@
 using namespace std;
 
 //Helper Functions
-
-int getNextRunID(const string& filename) {
-    ifstream inFile(filename);
-    string line;
-    int lastRun = 0;
-
-    // Skip header
-    getline(inFile, line);
-
-    while (getline(inFile, line)) {
-        int run;
-        sscanf(line.c_str(), "%d,", &run);
-        lastRun = run;
-    }
-
-    return lastRun + 1;
-}
-
 string toLowercase(const string &s) {
     string result = s;
     for (char& c: result) {
@@ -196,10 +178,18 @@ int main() {
         }
 
         //Save Results
+        string fieldName;
+        switch(sortChoice) {
+            case 1: fieldName = "House Price"; break;
+            case 2: fieldName = "House Size"; break;
+            case 3: fieldName = "Number of Beds"; break;
+            case 4: fieldName = "Number of Baths"; break;
+            case 5: fieldName = "Acre Lot Size"; break;
+            default: fieldName = "House Price"; break;
+        }
+
         string filename = "../sort_results.csv";
         bool fileExists = std::filesystem::exists(filename);
-
-        int runID = fileExists ? getNextRunID(filename) : 1;
 
         ofstream outFile(filename, ios::app);
 
@@ -208,9 +198,9 @@ int main() {
                 outFile << "Run,Algorithm,Time\n";
             }
 
-            outFile << runID << ",Heap Sort," << heapTime << "\n";
-            outFile << runID << ",Merge Sort," << mergeTime << "\n";
-            outFile << runID << ",Quick Sort," << quickTime << "\n";
+            outFile << fieldName << ",Heap Sort," << heapTime << "\n";
+            outFile << fieldName << ",Merge Sort," << mergeTime << "\n";
+            outFile << fieldName << ",Quick Sort," << quickTime << "\n";
 
             outFile.close();
         }
