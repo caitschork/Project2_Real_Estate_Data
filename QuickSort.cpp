@@ -4,8 +4,6 @@
 #include "QuickSort.h"
 #include <algorithm>
 
-double sortGetter(const realEstate& h, int sortType);
-
 // referenced quick sort logic & code from in person lecture notes
 double sortGetter(const realEstate& h, int sortType);
 

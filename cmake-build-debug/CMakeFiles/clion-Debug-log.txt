@@ -1,4 +1,4 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja -DPython_EXECUTABLE=/usr/local/bin/python3.12 -DPython3_EXECUTABLE=/usr/local/bin/python3.12 -S /Users/caitschork/CLionProjects/Project2_Housing_Data -B /Users/caitschork/CLionProjects/Project2_Housing_Data/cmake-build-debug
--- Configuring done (0.2s)
--- Generating done (0.1s)
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
 -- Build files have been written to: /Users/caitschork/CLionProjects/Project2_Housing_Data/cmake-build-debug
