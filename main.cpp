@@ -136,25 +136,10 @@ int main() {
             continue;
         }
 
-
         //Display Results
         vector<realEstate> heapData = filtered;
         vector<realEstate> mergeData = filtered;
         vector<realEstate> quickData = filtered;
-
-        //Displaying results by heap sort (all algorithms produce the same output)
-        cout << "\nTop 5 Results:\n";
-        for (int i = 0; i < 5 && i < heapData.size(); i++) {
-            cout << "Price: $" << heapData[i].price << "\n";
-            cout << "Beds: " << heapData[i].beds << "\n";
-            cout << "Baths: " << heapData[i].baths << "\n";
-            cout << "Acre Lot Size: " << heapData[i].acreLot << "\n";
-            cout << "City: " << heapData[i].city << "\n";
-            cout << "State: " << heapData[i].state << "\n";
-            cout << "Zip Code: " << heapData[i].zipCode << "\n";
-            cout << "House Size (sqft): " << heapData[i].houseSize << "\n";
-            cout << "\n";
-        }
 
         //Sort and Clocked Time
         //Heap sort
@@ -175,6 +160,19 @@ int main() {
         auto end3 = std::chrono::high_resolution_clock::now();
         auto quickTime = std::chrono::duration_cast<std::chrono::milliseconds>(end3 - start3).count();
 
+        //Displaying results by heap sort (all algorithms produce the same output)
+        cout << "\nTop 5 Results:\n";
+        for (int i = 0; i < 5 && i < heapData.size(); i++) {
+            cout << "Price: $" << heapData[i].price << "\n";
+            cout << "Beds: " << heapData[i].beds << "\n";
+            cout << "Baths: " << heapData[i].baths << "\n";
+            cout << "Acre Lot Size: " << heapData[i].acreLot << "\n";
+            cout << "City: " << heapData[i].city << "\n";
+            cout << "State: " << heapData[i].state << "\n";
+            cout << "Zip Code: " << heapData[i].zipCode << "\n";
+            cout << "House Size (sqft): " << heapData[i].houseSize << "\n";
+            cout << "\n";
+        }
 
         cout << "Heap Sort Time: " << heapTime << " ms" << endl;
         cout << "\nMerge Sort Time: " << mergeTime << " ms" << endl;
@@ -198,7 +196,7 @@ int main() {
 
         if (outFile.is_open()) {
             if (!fileExists) {
-                outFile << "Run,Algorithm,Time\n";
+                outFile << "Field,Algorithm,Time\n";
             }
 
             outFile << fieldName << ",Heap Sort," << heapTime << "\n";
