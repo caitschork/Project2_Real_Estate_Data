@@ -195,22 +195,6 @@ int main() {
             cout << "\n";
         }
 
-
-
-
-        // ofstream outFile("sort_results.csv");
-        // if (outFile.is_open()) {
-        //     outFile << "Algorithm,Time\n";
-        //     outFile << "Heap Sort," << heapTime << "\n";
-        //     outFile << "Merge Sort," << mergeTime << "\n";
-        //     // outFile << "Quick Sort," << quickTime << "\n"; // Uncomment when ready
-        //     outFile.close();
-        //     cout << "\nResults exported to sort_results.csv!" << endl;
-        // } else {
-        //     cout << "Error: Could not create CSV file." << endl;
-        // }
-
-
         //Save Results
         string filename = "../sort_results.csv";
         bool fileExists = std::filesystem::exists(filename);
