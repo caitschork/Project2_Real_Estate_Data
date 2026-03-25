@@ -1,21 +1,22 @@
-Algorithm,Time
-1873946577,Heap Sort,4547
-1873946577,Merge Sort,2739
-1873946578,Heap Sort,4547
-1873946578,Merge Sort,2733
-1873946578,Quick Sort,4438
-1873946579,Heap Sort,8
-1873946579,Merge Sort,2
-1873946579,Quick Sort,2
-1873946580,Heap Sort,0
-1873946580,Merge Sort,0
-1873946580,Quick Sort,0
-1873946581,Heap Sort,896
-1873946581,Merge Sort,311
-1873946581,Quick Sort,307
-1873946582,Heap Sort,48
-1873946582,Merge Sort,12
-1873946582,Quick Sort,7
-1873946583,Heap Sort,114
-1873946583,Merge Sort,34
-1873946583,Quick Sort,29
+Field,Algorithm,Time
+House Price,Heap Sort,5
+House Price,Merge Sort,3
+House Price,Quick Sort,1
+House Size,Heap Sort,2747
+House Size,Merge Sort,1616
+House Size,Quick Sort,1297
+Number of Beds,Heap Sort,15
+Number of Beds,Merge Sort,9
+Number of Beds,Quick Sort,10
+Number of Baths,Heap Sort,4
+Number of Baths,Merge Sort,3
+Number of Baths,Quick Sort,2
+Acre Lot Size,Heap Sort,4
+Acre Lot Size,Merge Sort,3
+Acre Lot Size,Quick Sort,4
+House Price,Heap Sort,162
+House Price,Merge Sort,87
+House Price,Quick Sort,42
+Number of Beds,Heap Sort,129
+Number of Beds,Merge Sort,85
+Number of Beds,Quick Sort,1581
