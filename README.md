@@ -2,11 +2,11 @@
 
 ## Table of Contents
 - [Project Description](#Project-Description)
--   [Purpose & Motivation](#Purpose-&-Motivation)
--   [Features](#Features)
+  - [Purpose & Motivation](#Purpose-&-Motivation)
+  - [Features](#Features)
 - [Getting Started](#Getting-Started)
--   [Running the Housing Search Engine](#Running-the-Housing-Search-Engine)
--   [Running the Python Analysis](#Running-the-Python-Analysis)
+  - [Running the Housing Search Engine](#Running-the-Housing-Search-Engine)
+  - [Running the Python Analysis](#Running-the-Python-Analysis)
 - [Collaborators](#Collaborators)
 
 ## Project Description
