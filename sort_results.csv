@@ -26,6 +26,9 @@ House Size,Quick Sort,1
 House Price,Heap Sort,60
 House Price,Merge Sort,15
 House Price,Quick Sort,10
+House Price,Heap Sort,4263
+House Price,Merge Sort,1397
+House Price,Quick Sort,2888
 Number of Baths,Heap Sort,185
 Number of Baths,Merge Sort,150
 Number of Baths,Quick Sort,2799
@@ -35,3 +38,45 @@ Number of Beds,Quick Sort,25
 Acre Lot Size,Heap Sort,22
 Acre Lot Size,Merge Sort,13
 Acre Lot Size,Quick Sort,81
+Number of Beds,Heap Sort,9
+Number of Beds,Merge Sort,4
+Number of Beds,Quick Sort,5
+House Price,Heap Sort,154
+House Price,Merge Sort,47
+House Price,Quick Sort,38
+Acre Lot Size,Heap Sort,148
+Acre Lot Size,Merge Sort,48
+Acre Lot Size,Quick Sort,1875
+House Price,Heap Sort,0
+House Price,Merge Sort,0
+House Price,Quick Sort,0
+House Size,Heap Sort,237
+House Size,Merge Sort,76
+House Size,Quick Sort,56
+House Size,Heap Sort,272
+House Size,Merge Sort,93
+House Size,Quick Sort,63
+Acre Lot Size,Heap Sort,148
+Acre Lot Size,Merge Sort,46
+Acre Lot Size,Quick Sort,1802
+House Price,Heap Sort,94
+House Price,Merge Sort,25
+House Price,Quick Sort,18
+House Size,Heap Sort,238
+House Size,Merge Sort,76
+House Size,Quick Sort,56
+Acre Lot Size,Heap Sort,148
+Acre Lot Size,Merge Sort,46
+Acre Lot Size,Quick Sort,1801
+House Price,Heap Sort,93
+House Price,Merge Sort,24
+House Price,Quick Sort,18
+House Price,Heap Sort,277
+House Price,Merge Sort,87
+House Price,Quick Sort,68
+Acre Lot Size,Heap Sort,164
+Acre Lot Size,Merge Sort,57
+Acre Lot Size,Quick Sort,2138
+House Price,Heap Sort,92
+House Price,Merge Sort,29
+House Price,Quick Sort,20
