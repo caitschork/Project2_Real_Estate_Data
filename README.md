@@ -1,10 +1,10 @@
 # COP3530 - Project 2 - Team: The Housing Crisis (Personified)
 
 ## Table of Contents
-- [Project Description & Features]("https://github.com/caitschork/Project2_Real_Estate_Data?tab=readme-ov-file#project-description")
-- [Getting Started: Running the Housing Search Engine]("https://github.com/caitschork/Project2_Real_Estate_Data?tab=readme-ov-file#getting-started-with-running-the-housing-search-engine")
-- [Getting Started: Running the Python Analysis]("https://github.com/caitschork/Project2_Real_Estate_Data?tab=readme-ov-file#getting-started-with-running-the-python-analysis")
-- Collaborators
+- [Project Description & Features](#Project-Description)
+- [Getting Started: Running the Housing Search Engine](#Running-the-Housing-Search-Engine)
+- [Getting Started: Running the Python Analysis](#Running-the-Python-Analysis)
+- [Collaborators](#Collaborators)
 
 ## Project Description
 
