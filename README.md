@@ -1,9 +1,12 @@
 # COP3530 - Project 2 - Team: The Housing Crisis (Personified)
 
 ## Table of Contents
-- [Project Description & Features](#Project-Description)
-- [Getting Started: Running the Housing Search Engine](#Running-the-Housing-Search-Engine)
-- [Getting Started: Running the Python Analysis](#Running-the-Python-Analysis)
+- [Project Description](#Project-Description)
+-   [Purpose & Motivation](#Purpose-&-Motivation)
+-   [Features](#Features)
+- [Getting Started](#Getting-Started)
+-   [Running the Housing Search Engine](#Running-the-Housing-Search-Engine)
+-   [Running the Python Analysis](#Running-the-Python-Analysis)
 - [Collaborators](#Collaborators)
 
 ## Project Description
