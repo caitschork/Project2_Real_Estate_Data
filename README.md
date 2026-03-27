@@ -7,6 +7,7 @@
 - [Getting Started](#Getting-Started)
   - [Running the Housing Search Engine](#Running-the-Housing-Search-Engine)
   - [Running the Python Analysis](#Running-the-Python-Analysis)
+  - [Switching Between the Housing Search Engine and the Python Analysis](#Switching-Between-the-Housing-Search-Engine-and-the-Python-Analysis)
 - [Collaborators](#Collaborators)
 
 ## Project Description
@@ -41,7 +42,7 @@ of the program (or the overall performance for all fields), and then presents it
 chart, or heatmap (again, chosen by the user). In order to run the Python file, the user must connect their C++ IDE to 
 a Python interpreter and install the following packages: pandas, matplotlib, and seaborn.
 
-### Switching between the Main Program and Visualization 
+### Switching Between the Housing Search Engine and the Python Analysis 
 The user must toggle between the two configuration on their IDE and select if they want to run the main program to 
 conduct more searches or visualize their searches based on the csv file that saves and stores all searches. 
 The sort_results.csv can be manually cleared by the user for restarting analysis.
